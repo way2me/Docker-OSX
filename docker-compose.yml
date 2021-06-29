@@ -6,9 +6,9 @@ services:
     build:
       context: .
       args:
-        - SIZE=200G
-        - VERSION=10.15.5
-    image: sickcodes/docker-osx
+        - SIZE=160G
+        - VERSION=11.4
+    image: way2ezee/docker-osx
     privileged: true
     environment:
       - DISPLAY=${DISPLAY:-:0.0}

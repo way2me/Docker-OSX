@@ -23,11 +23,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and push
-        id: docker_build
+        id: docker_build        
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: way2ezee/docker-osx:latest
+          tags: way2ezee/docker-osx:big-sur
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

@@ -58,8 +58,8 @@ MAINTAINER 'https://twitter.com/sickcodes' <https://sick.codes>
 SHELL ["/bin/bash", "-c"]
 
 # change disk size here or add during build, e.g. --build-arg VERSION=10.14.5 --build-arg SIZE=50G
-ARG SIZE=200G
-ARG VERSION=10.15.6
+ARG SIZE=180G
+ARG VERSION=11.4
 
 # OPTIONAL: Arch Linux server mirrors for super fast builds
 # set RANKMIRRORS to any value other that nothing, e.g. -e RANKMIRRORS=true
@@ -205,8 +205,8 @@ RUN yes | sudo pacman -U https://archive.archlinux.org/packages/f/file/file-5.39
 # TEMP-FIX for file 5.40 libguestfs issue
 
 # optional --build-arg to change branches for testing
-ARG BRANCH=master
-ARG REPO='https://github.com/sickcodes/Docker-OSX.git'
+ARG BRANCH=my_changes
+ARG REPO='https://github.com/way2me/Docker-OSX.git'
 RUN git clone --recurse-submodules --depth 1 --branch "${BRANCH}" "${REPO}"
 
 RUN touch Launch.sh \
